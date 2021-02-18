@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Request Ride</title>
+    </head>
+    <body>
+        <h2>
+            <span style="background-color:#000080; color:#ff6600;">Request Ride</span>
+        </h2>
+        <table align="left">
+            <tbody>
+                <tr>
+                    <td>Ride Id</td>
+                    <td>
+                        <select>
+                            <option>R001</option>
+                            <option>R002</option>
+                            <option>R003</option>
+                            <option>R004</option>
+                            <option>R005</option>
+                            <option>R006</option>
+                            <option>R007</option>
+                            <option>R008</option>
+                            <option>R009</option>
+                            <option>R0010</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>User Name</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Ride Start Date</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>Number of seats required</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Number of seats available</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Ride Cost</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><br><button>Submit Query</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

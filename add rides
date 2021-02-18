@@ -1,0 +1,17 @@
+<!DOCTYPE html> 
+<html> 
+    <body> 
+        <h2 align="center"><span style="background-color:#000080;color:#ff6600">Add Rides</span></h2> 
+        <table align="center"> 
+            <tbody> 
+                <tr> <td>From</td> <td><input type="text"></td> </tr> 
+                <tr> <td>To</td> <td><input type="text"></td> </tr> 
+                <tr> <td>Total No Of Seats</td> <td><input type="text"></td> </tr> 
+                <tr> <td>Start Date and Time</td> <td><input type="datetime"></td> </tr> 
+                <tr> <td>End Date and Time</td> <td><input type="datetime"></td> </tr> 
+                <tr> <td>Ride Amount</td> <td><input type="text"></td> </tr> 
+                <tr> <td><input type="button" value="Submit"></td> </tr> 
+            </tbody> 
+        </table> 
+    </body> 
+</html>

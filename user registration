@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>User Registration Form</title>
+    </head>
+    <body>
+        <h1 align="center">User Registration Form</h1>
+        <table align="center">
+            <tbody>
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" id="fname"></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" id="pwd"></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password</td>
+                    <td><input type="password" id="cnfrmPwd"></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number</td>
+                    <td><input type="text" id="mobileNo"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="gender" value="Male">Male
+                        <input type="radio" name="gender" value="Female">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Country</td>
+                    <td>
+                        <select>
+                            <option value="INDIA" selected>INDIA</option>
+                            <option value="USA">USA</option>
+                            <option value="GERMANY">GERMANY</option>
+                            <option value="FRANCE">FRANCE</option>
+                        </select>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>City</td>
+                    <td>
+                        <select>
+                            <option value="Bengaluru">Bengaluru</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Mumbai">Mumbai</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><br><button id="btn">Submit</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <script src="/scripts/index.js"></script>
+    </body>
+</html>
+
+const firstName = document.getElementById('fName');
+const passwd = document.getElementById('pwd');
+const cnfrmpasswd = document.getElementById('cnfrmPwd');
+const phnNo = document.getElementById('mobileNo');
+const butn = document.getElementById('btn');
+
+const fieldValidation = () => {
+    let fn = firstName.value;
+    let pawd = passwd.value;
+    let cnfpawd = cnfrmpasswd.value;
+    let phn = phnNo.value;
+
+    if(fn === "") alert("Name can't be empty!!");
+    else if(/^([A-Za-z]){4,}$/.test(fn)) alert("Name OK!");
+    else alert("Name should contain only alphabets and it should be min. of 4 char");
+    
+    if(pawd === "") alert("Password can't be empty!!");
+    else if(/^(?=.[0-9])(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&]{8,15}$/.test(pawd)) alert("Password OK!");
+    else alert("Password Must be Alphanumeric with special char and length must be 8 chars or more");
+
+    if((/^(?=.[0-9])(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&]{8,15}$/.test(pawd))){
+    if(cnfpawd === "") alert("Confirm Password can't be empty!!");
+    else if(cnfpawd.match(pawd)) alert("Confirm password matches with password!");    
+    else alert("Confirm password doesn't match with password");}
+    
+    if(phn === "") alert("Mobile Number can't be empty!!");
+    else if(/^[6789][0-9]{9}$/.test(phn)) alert("Mobile Number OK!");
+    else alert("Mobile number have exactly 10 digits and starting from 6 to 9");
+}
+
+butn.addEventListener('click', fieldValidation);
